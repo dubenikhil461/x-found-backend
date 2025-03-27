@@ -6,7 +6,10 @@ const connectedUsers = new Map();
 const setupSocket = (server) => {
   const io = new Server(server, {
     cors: {
-      origin: "https://x-found.netlify.app",
+      origin: [
+        "http://localhost:3000", // Local frontend (for development)
+        "https://x-found.netlify.app",
+      ],
       methods: ["GET", "POST"],
     },
   });
