@@ -24,7 +24,7 @@ const app = express();
 app.use(
   cors({
     origin: [
-      "http://localhost:5173",  // Local frontend (for development)
+      "http://localhost:3000",  // Local frontend (for development)
       "https://x-found.netlify.app"  // Deployed frontend
     ],
     methods: ["GET", "POST", "PUT", "DELETE"],
